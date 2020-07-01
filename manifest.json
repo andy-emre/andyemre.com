@@ -1,0 +1,38 @@
+{
+  "lang": "en", // Uygulamanın dili
+  "dir": "ltr", // Dil yazma sistemi / Direction
+  "name": "Andy Salvador's",
+  "short_name": "Andy",
+  "description": "Andy Salvador's-Bilim ve Teknoloji Bloğu",
+  "sandbox": {
+    "pages": [
+      "page1.html",
+      "directory/page2.html"
+    ]
+    // content_security_policy is optional.
+    "content_security_policy":
+        "sandbox allow-scripts; script-src 'self'"
+  ],
+
+  "icons": [{
+    "src": "images/icon.png",
+    "sizes": "578x578"
+  "favicon": [{
+     "src": "images/favicon.png",
+     "sizes": "578x578"
+  }],{
+   "image":[{
+     "src": "image/sa-compressor.jpg",  // 
+     "sizes": "1067x468"
+  }],
+  "scope": "/pages/", // Uygulamanın kapsam alanı
+  "start_url": "/amp/index.html", // Uygulamanın başlangıç sayfası (?source=pwa ve/ya ?utm_source=pwa gibi bir tanımla kaynak olarak işaretleme gerçekleştirilebilir)
+  "display": "fullscreen", // Uygulamanın nasıl görüntüleneceği (fullscreen veya standalone)
+  "theme_color": "#423532", // Uygulamanın bar rengi
+  "background_color": "#000000", // Uygulamanın arka plan görüntüleneceği
+  "serviceworker": { // Service worker tanımı
+    "src": "sw.js", // Service worker dosyası
+    "scope": "/racer/", // Service worker işleminin uygulanacağı alan
+    "update_via_cache": "none" // Önbellekleme işlemi
+  },
+}
